@@ -87,7 +87,6 @@ function kzx_base64_decode($str, $hashTable=null) {
     for ($i=0; $i<$len; $i++){
         $binaryStr .= format_6bit(decbin($char2num[$str[$i]]));
     }
-    print $binaryStr . "\n";
     $binaryStrLen = strlen($binaryStr);
     $binaryStrLen = $binaryStrLen-$supplement*2;
     $binaryStr = substr($binaryStr, 0, $binaryStrLen);
@@ -99,3 +98,4 @@ function kzx_base64_decode($str, $hashTable=null) {
     }
     return $ret;
 }
+
